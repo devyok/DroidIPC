@@ -13,7 +13,7 @@ import android.os.IBinder;
 
 import com.devy.droidipc.LogControler.Level;
 /**
- * Ö÷Òª¸ºÔğÏòÔ¶³Ì·şÎñ¶Ë·¢ËÍÃüÁî 
+ * ä¸»è¦è´Ÿè´£å‘è¿œç¨‹æœåŠ¡ç«¯å‘é€å‘½ä»¤ 
  * @author wei.deng
  */
 @SuppressLint("NewApi") 

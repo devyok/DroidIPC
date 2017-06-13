@@ -3,7 +3,7 @@ package com.devy.droidipc;
 import android.os.Bundle;
 import android.os.IInterface;
 /**
- * 统一进程间通信接口 
+ * 缁熶竴杩涚▼闂撮�氫俊鎺ュ彛 
  * @author wei.deng
  */
 public interface IBundleReceiver extends IInterface{

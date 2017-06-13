@@ -5,9 +5,6 @@ public class IPCException extends Exception{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * ´íÎóÂë
-	 */
 	private int code;
 	
 	public int getCode() {

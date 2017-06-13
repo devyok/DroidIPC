@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.os.HandlerThread;
 
 /**
- * CoreThreadÖ÷ÒªÌá¹©Òì²½µÄÏûÏ¢´¦Àí
+ * CoreThreadä¸»è¦æä¾›å¼‚æ­¥çš„æ¶ˆæ¯å¤„ç†
  */
 final class CoreThread extends HandlerThread {
     private static CoreThread sInstance;

@@ -17,11 +17,10 @@ import android.util.Log;
 
 import com.devy.droidipc.LogControler.Level;
 
-
 /**
- * Ã¿Ò»¸öÔ¶³Ì·şÎñ¶¼ĞèÒªÔÚ´Ë´¦ÉùÃ÷<br>
- * Í¬Ê±{@link ServiceContext}Ö§³Ö»ñÈ¡ËùÓĞÉùÃ÷·şÎñµÄ½ø³ÌºÍÉùÃ÷Ê¹ÓÃ·şÎñµÄ½ø³ÌµÄ{@link PackageInfo}<p>
- * {@link ServiceContext}²¿·ÖÊµÏÖ²»¶ÔÍâ±©Â¶
+ * æ¯ä¸€ä¸ªè¿œç¨‹æœåŠ¡éƒ½éœ€è¦åœ¨æ­¤å¤„å£°æ˜<br>
+ * åŒæ—¶{@link ServiceContext}æ”¯æŒè·å–æ‰€æœ‰å£°æ˜æœåŠ¡çš„è¿›ç¨‹å’Œå£°æ˜ä½¿ç”¨æœåŠ¡çš„è¿›ç¨‹çš„{@link PackageInfo}<p>
+ * {@link ServiceContext}éƒ¨åˆ†å®ç°ä¸å¯¹å¤–æš´éœ²
  * @author wei.deng
  */
 class ServiceContext {
@@ -63,7 +62,7 @@ class ServiceContext {
 	final static String EXTRA_BUNDLE = "intent.bundle";
 	final static String EXTRA_CALLBACK = "extra.bundle.callback";
 	
-	//¹ÜÀíËùÓĞ·şÎñµÄËùÔÚ½ø³Ì°üÃû
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ì°ï¿½ï¿½ï¿½
 	final static String SERVER_PACKAGE_NAME = "com.devy.service_manager";
 	
 	final static String ACTION_REMOTE_CLIENT_COMMAND = "com.devy.action.REMOTE_CLIENT_COMMAND_LISTENER";
@@ -73,23 +72,23 @@ class ServiceContext {
 	
 	final static class RemoteServiceInfos {
 		/**
-		 * ËùÓĞÉùÃ÷ÁËĞèÒªÌá¹©Ô¶³Ì·şÎñµÄĞÅÏ¢
+		 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½á¹©Ô¶ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 		 *
-		 * map.key = ·şÎñÃû³Æ
-		 * map.value = ·şÎñ¶ÔÓ¦µÄÏêÏ¸ĞÅÏ¢
+		 * map.key = ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		 * map.value = ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ï¢
 		 */
 		public HashMap<String, ResolveInfo> mServiceProviderMappings = new HashMap<String, ResolveInfo>();
 		/**
-		 * ËùÓĞĞèÒªÖ´ĞĞÔ¶³Ì·şÎñµÄÅäÖÃĞÅÏ¢
+		 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÖ´ï¿½ï¿½Ô¶ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 		 */
 		public ArrayList<ResolveInfo> mAllConfigServiceNodeInfos = new ArrayList<ResolveInfo>();
 		/**
-		 * ËùÓĞÌá¹©·şÎñµÄÅäÖÃĞÅÏ¢
+		 * ï¿½ï¿½ï¿½ï¿½ï¿½á¹©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 		 */
 		public ArrayList<ResolveInfo> mAllServiceProviderInfos = new ArrayList<ResolveInfo>();
 		public ArrayList<ResolveInfo> mAllServiceClientInfos = new ArrayList<ResolveInfo>();
 		/**
-		 * ËùÓĞĞèÒªÔ¶³Ì·şÎñµÄ½ø³ÌÃû³Æ
+		 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÔ¶ï¿½Ì·ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		 */
 		public ArrayList<String> mAllConfigServiceProcessName = new ArrayList<String>();
 		
@@ -102,8 +101,8 @@ class ServiceContext {
 	}
 	
 	/**
-	 * map.key = ·şÎñÃû³Æ
-	 * map.value = ·şÎñ¶ÔÓ¦µÄ°üÃû
+	 * map.key = ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * map.value = ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä°ï¿½ï¿½ï¿½
 	 */
 	private static RemoteServiceInfos queryRemoteServiceInfos(Context context){
 		

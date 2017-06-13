@@ -7,8 +7,8 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
 /**
- * ¼àÌıËùÓĞÃüÁî£¬²¢·Ö·¢<br>
- * ËùÓĞÃüÁî¶¨Òå²Î¿¼{@link ServiceContext} 
+ * ç›‘å¬æ‰€æœ‰å‘½ä»¤ï¼Œå¹¶åˆ†å‘<br>
+ * æ‰€æœ‰å‘½ä»¤å®šä¹‰å‚è€ƒ{@link ServiceContext} 
  * @author wei.deng
  */
 public class RemoteCommandListener extends Service {

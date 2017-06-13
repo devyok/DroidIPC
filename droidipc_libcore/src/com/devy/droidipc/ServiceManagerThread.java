@@ -19,7 +19,7 @@ import com.devy.droidipc.ServiceContext.RemoteServiceInfos;
 import com.devy.droidipc.ServiceProcessMonitor.OnClientProcessStateChangedListener;
 import com.devy.droidipc.LogControler.Level;
 /**
- *  ServerManagerThreadÖ÷Òª¸ºÔğ¹ÜÀíËùÓĞµÄ¿Í»§¶Ë·şÎñ
+ *  ServerManagerThreadä¸»è¦è´Ÿè´£ç®¡ç†æ‰€æœ‰çš„å®¢æˆ·ç«¯æœåŠ¡
  * @author wei.deng
  */
 @SuppressLint("NewApi") 

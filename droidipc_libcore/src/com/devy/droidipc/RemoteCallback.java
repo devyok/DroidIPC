@@ -2,7 +2,7 @@ package com.devy.droidipc;
 
 import android.os.Bundle;
 /**
- * RemoteCallback Զ�̻ص�
+ * RemoteCallback 远程回调
  * @author wei.deng
  */
 @Deprecated

@@ -5,7 +5,7 @@ import com.devy.droidipc.exception.IPCTimeoutException;
 
 import android.os.IBinder;
 /**
- * 统一接口
+ * 缁熶竴鎺ュ彛
  * @author wei.deng
  */
 public interface IServiceManager {

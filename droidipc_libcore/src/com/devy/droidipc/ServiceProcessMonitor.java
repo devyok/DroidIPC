@@ -13,8 +13,8 @@ import android.os.HandlerThread;
 import com.devy.droidipc.LogControler.Level;
 
 /**
- * ClientProcessMonitorServiceÖ÷Òª¸ºÔğ¼à¿ØËùÓĞ·şÎñÌá¹©ÕßÓëÊ¹ÓÃÕß½ø³ÌµÄ×´Ì¬<br>
- * ËùÓĞ½ø³ÌÆô¶¯ºóÍ¨¹ı{@link OnClientProcessStateChangedListener}Í¨Öª
+ * ClientProcessMonitorServiceä¸»è¦è´Ÿè´£ç›‘æ§æ‰€æœ‰æœåŠ¡æä¾›è€…ä¸ä½¿ç”¨è€…è¿›ç¨‹çš„çŠ¶æ€<br>
+ * æ‰€æœ‰è¿›ç¨‹å¯åŠ¨åé€šè¿‡{@link OnClientProcessStateChangedListener}é€šçŸ¥
  * @author wei.deng
  */
 class ServiceProcessMonitor extends HandlerThread{

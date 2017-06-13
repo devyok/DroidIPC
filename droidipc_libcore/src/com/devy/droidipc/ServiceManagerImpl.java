@@ -21,34 +21,34 @@ import android.os.RemoteException;
 import android.util.Log;
 
 /**
- * ±¾¶ÔÏóÖ÷Òª¸ºÔğÓëÔ¶³Ì·şÎñ¹ÜÀí²ãÍ¨ĞÅ<br>
- * <p>Ö÷Òª°üÀ¨Á½ÖÖ²Ù×÷£º</p>
- * 1.Ìí¼Ó{@link ServiceManagerImpl#addService()}Ô¶³Ì·şÎñ<br>
- * 2.»ñÈ¡{@link ServiceManagerImpl#getService()}Ô¶³Ì·şÎñ<br>
+ * æœ¬å¯¹è±¡ä¸»è¦è´Ÿè´£ä¸è¿œç¨‹æœåŠ¡ç®¡ç†å±‚é€šä¿¡<br>
+ * <p>ä¸»è¦åŒ…æ‹¬ä¸¤ç§æ“ä½œï¼š</p>
+ * 1.æ·»åŠ {@link ServiceManagerImpl#addService()}è¿œç¨‹æœåŠ¡<br>
+ * 2.è·å–{@link ServiceManagerImpl#getService()}è¿œç¨‹æœåŠ¡<br>
  * <br>
- * <p>Ã¿Ò»¸ö·şÎñµÄ¾ßÌåÊµÏÖ±ØĞëÒÀÀµ{@link BundleReceiver}</p>
+ * <p>æ¯ä¸€ä¸ªæœåŠ¡çš„å…·ä½“å®ç°å¿…é¡»ä¾èµ–{@link BundleReceiver}</p>
  * 
- * µ±¿Í»§¶ËÍ¨¹ı{@link ServiceManagerImpl#getService()} È¥»ñÈ¡Ô¶³Ì·şÎñÊ±,Èç¹û´Ë·şÎñ»¹Ã»ÓĞ±»<br>
- * ·şÎñÊµÏÖÕß(ÁíÒ»¸ö½ø³Ì»òAPK)Ìí¼Óµ½{@link ServiceManagerThread}ÖĞ,ÄÇÃ´´ËÊ±{@link ServiceManagerImpl#getService()}<br>
- * ½«»á±»×èÈûµÈ´ı¡£ µÈ´ıÊ±¼äÎª{@link ServiceManagerImpl#TIMEOUT}£¬ÔÚÕâ¸öÊ±¼ä¶ÎÄÚ£¬Èç¹û±»Ìí¼Óµ½{@link ServiceManagerThread}<br>
- * ºó£¬»áÍ¨ÖªËùÓĞ¿Í»§¶Ë{@link ServiceManagerImpl}¶ÔÏóÖĞ¶Ï×èÈû£¬²¢¼ÌĞøÖ´ĞĞ{@link ServiceManagerImpl#getService()}¡£
+ * å½“å®¢æˆ·ç«¯é€šè¿‡{@link ServiceManagerImpl#getService()} å»è·å–è¿œç¨‹æœåŠ¡æ—¶,å¦‚æœæ­¤æœåŠ¡è¿˜æ²¡æœ‰è¢«<br>
+ * æœåŠ¡å®ç°è€…(å¦ä¸€ä¸ªè¿›ç¨‹æˆ–APK)æ·»åŠ åˆ°{@link ServiceManagerThread}ä¸­,é‚£ä¹ˆæ­¤æ—¶{@link ServiceManagerImpl#getService()}<br>
+ * å°†ä¼šè¢«é˜»å¡ç­‰å¾…ã€‚ ç­‰å¾…æ—¶é—´ä¸º{@link ServiceManagerImpl#TIMEOUT}ï¼Œåœ¨è¿™ä¸ªæ—¶é—´æ®µå†…ï¼Œå¦‚æœè¢«æ·»åŠ åˆ°{@link ServiceManagerThread}<br>
+ * åï¼Œä¼šé€šçŸ¥æ‰€æœ‰å®¢æˆ·ç«¯{@link ServiceManagerImpl}å¯¹è±¡ä¸­æ–­é˜»å¡ï¼Œå¹¶ç»§ç»­æ‰§è¡Œ{@link ServiceManagerImpl#getService()}ã€‚
  * 
- * <p>´úÂëÊ¾ÀıÈçÏÂ£º</p>
+ * <p>ä»£ç ç¤ºä¾‹å¦‚ä¸‹ï¼š</p>
  * 
- * <p>1. ÊµÏÖGPS·şÎñ¶ÔÏó£º</p>
+ * <p>1. å®ç°GPSæœåŠ¡å¯¹è±¡ï¼š</p>
  * public class GpsService extends BundleReceiver {<br>
 
 	public Bundle onReceiver(Bundle bundle) {<br>
-		<p>//¸ù¾İË«·¢Ô¼¶¨´Ó²ÎÊıbundle¶ÔÏóÖĞ»ñÈ¡²ÎÊı £¬·µ»ØÒ²Í¬Ñù£¬ ¸ù¾İÔ¼¶¨·µ»ØÏàÓ¦ </p>
+		<p>//æ ¹æ®åŒå‘çº¦å®šä»å‚æ•°bundleå¯¹è±¡ä¸­è·å–å‚æ•° ï¼Œè¿”å›ä¹ŸåŒæ ·ï¼Œ æ ¹æ®çº¦å®šè¿”å›ç›¸åº” </p>
 		return new Bundle();<br>
 	}<br>
 
    }<br>
    
-   <p>2.´´½¨GPS·şÎñ¶ÔÏó</p>
+   <p>2.åˆ›å»ºGPSæœåŠ¡å¯¹è±¡</p>
    <p>GpsService gpsControler = new GpsService();</p>
    
-   <p>3.ÍĞ¹ÜGPS·şÎñ¶ÔÏó</p>
+   <p>3.æ‰˜ç®¡GPSæœåŠ¡å¯¹è±¡</p>
    ServiceManager.asycQueryInterface(getApplicationContext(), new OnQueryResult() {<br>
 		public void onQueryResult(ServiceManager serviceManager) {<br>
 			<br>
@@ -64,7 +64,7 @@ class ServiceManagerImpl extends Binder implements IServiceManager , IBinder.Dea
 
 	private static long sServerInitTime = 0L;
 	/**
-	 * ¿ÉÒÔÍ¨¹ı´Ë¶ÔÏó£¬»ñÈ¡·şÎñ¹ÜÀí²ãËùÓĞÒµÎñ¶ÔÏó
+	 * å¯ä»¥é€šè¿‡æ­¤å¯¹è±¡ï¼Œè·å–æœåŠ¡ç®¡ç†å±‚æ‰€æœ‰ä¸šåŠ¡å¯¹è±¡
 	 */
 	private IBinder mRemoteServiceManager;
 	
@@ -74,7 +74,7 @@ class ServiceManagerImpl extends Binder implements IServiceManager , IBinder.Dea
 	static final ArrayList<OnQueryResultHandler> sGlobalHandlers = new ArrayList<ServiceManagerImpl.OnQueryResultHandler>();
 	
 	/**
-	 * »º´æËùÓĞ¿Í»§¶ËµÄ·şÎñ¶ÔÏó
+	 * ç¼“å­˜æ‰€æœ‰å®¢æˆ·ç«¯çš„æœåŠ¡å¯¹è±¡
 	 */
 	static LinkedHashMap<String, IBinder> sClientServiceCache = new LinkedHashMap<String, IBinder>();
 	/**
@@ -105,14 +105,14 @@ class ServiceManagerImpl extends Binder implements IServiceManager , IBinder.Dea
 	}
 	/**
 	 * 
-	 * ±¾·½·¨¸ºÔğ»ñÈ¡Ô¶³Ì·şÎñ¹ÜÀí¶ÔÏó{@link ServiceManagerThread}£¬ »ñÈ¡´Ë¶ÔÏóÖ®ºó£¬
-	 * <br>»á·µ»Ø±¾µØ{@link ServiceManagerImpl}
-	 * ±¾µØµÄ{@link ServiceManagerImpl}¶ÔÏó£¬ ÊÇ¶ÔÔ¶³Ì·şÎñ¶ÔÏó{@link ServiceManagerThread}µÄ´úÀí¡£ 
+	 * æœ¬æ–¹æ³•è´Ÿè´£è·å–è¿œç¨‹æœåŠ¡ç®¡ç†å¯¹è±¡{@link ServiceManagerThread}ï¼Œ è·å–æ­¤å¯¹è±¡ä¹‹åï¼Œ
+	 * <br>ä¼šè¿”å›æœ¬åœ°{@link ServiceManagerImpl}
+	 * æœ¬åœ°çš„{@link ServiceManagerImpl}å¯¹è±¡ï¼Œ æ˜¯å¯¹è¿œç¨‹æœåŠ¡å¯¹è±¡{@link ServiceManagerThread}çš„ä»£ç†ã€‚ 
 	 * <br>
 	 * 
-	 * µ±¿Í»§¶ËÍ¨¹ı{@link ServiceManagerImpl#asycQueryInterface()}»ñÈ¡µ½Ô¶³Ì·şÎñ²ãµÄ¹ÜÀí¶ÔÏó{@link ServiceManagerThread}Ö®ºó
+	 * å½“å®¢æˆ·ç«¯é€šè¿‡{@link ServiceManagerImpl#asycQueryInterface()}è·å–åˆ°è¿œç¨‹æœåŠ¡å±‚çš„ç®¡ç†å¯¹è±¡{@link ServiceManagerThread}ä¹‹å
 	 * <br>
-	 * »áµÚÒ»Ê±¼ä·¢ËÍ´ËÏûÏ¢{@link ServiceContext#MANAGED_CLIENT_SIVMGR}½«¿Í»§¶Ë¶ÔÏó{@link ServiceManagerImpl}·¢ËÍ¸ø{@link ServiceManagerThread}£¬À´ÍĞ¹Ü×Ô¼º¡£
+	 * ä¼šç¬¬ä¸€æ—¶é—´å‘é€æ­¤æ¶ˆæ¯{@link ServiceContext#MANAGED_CLIENT_SIVMGR}å°†å®¢æˆ·ç«¯å¯¹è±¡{@link ServiceManagerImpl}å‘é€ç»™{@link ServiceManagerThread}ï¼Œæ¥æ‰˜ç®¡è‡ªå·±ã€‚
 	 * 
 	 * @param context
 	 * @param onQueryResult
@@ -201,10 +201,10 @@ class ServiceManagerImpl extends Binder implements IServiceManager , IBinder.Dea
 	}
 	
 	/**
-	 * ÏòÔ¶³Ì·şÎñ¹ÜÀí²ãÌí¼ÓÒµÎñÊµÏÖ¶ÔÏó£¬ÆäËû½ø³Ì¾Í¿ÉÒÔÍ¨¹ı{@link ServiceManagerImpl#getService()}»ñÈ¡´Ë·şÎñ¶ÔÏó
+	 * å‘è¿œç¨‹æœåŠ¡ç®¡ç†å±‚æ·»åŠ ä¸šåŠ¡å®ç°å¯¹è±¡ï¼Œå…¶ä»–è¿›ç¨‹å°±å¯ä»¥é€šè¿‡{@link ServiceManagerImpl#getService()}è·å–æ­¤æœåŠ¡å¯¹è±¡
 	 * 
-	 * @param name ·şÎñÃû³Æ
-	 * @param service ·şÎñµÄ¾ßÌåÊµÏÖ,±ØĞëÊµÏÖ{@link BundleReceiver}
+	 * @param name æœåŠ¡åç§°
+	 * @param service æœåŠ¡çš„å…·ä½“å®ç°,å¿…é¡»å®ç°{@link BundleReceiver}
 	 */
 	public int addService(String name, IBinder service) {
 		
@@ -239,8 +239,8 @@ class ServiceManagerImpl extends Binder implements IServiceManager , IBinder.Dea
 	}
 	
 	/**
-	 * ´ÓÔ¶³Ì·şÎñ¹ÜÀí²ã»ñÈ¡·şÎñ¶ÔÏó
-	 * @param name ·şÎñÃû³Æ
+	 * ä»è¿œç¨‹æœåŠ¡ç®¡ç†å±‚è·å–æœåŠ¡å¯¹è±¡
+	 * @param name æœåŠ¡åç§°
 	 * @throws IPCTimeoutException 
 	 */
 	public IBinder getService(String name) throws IPCTimeoutException {
@@ -281,7 +281,7 @@ class ServiceManagerImpl extends Binder implements IServiceManager , IBinder.Dea
 	}
 	
 	/**
-	 * ¼ì²éËùÓĞµÄ·şÎñÊÇ·ñÒÑ¾­¾ÍÎ»(ÒÑ¾­Ìí¼Óµ½{@link ServiceManagerThread})
+	 * æ£€æŸ¥æ‰€æœ‰çš„æœåŠ¡æ˜¯å¦å·²ç»å°±ä½(å·²ç»æ·»åŠ åˆ°{@link ServiceManagerThread})
 	 * @return
 	 */
 	private boolean isReadyRemote(){
@@ -472,7 +472,7 @@ class ServiceManagerImpl extends Binder implements IServiceManager , IBinder.Dea
 		
 //		recycle();
 		
-		//·şÎñ¹ÜÀí½ø³ÌÒì³£±ÀÀ£
+		//æœåŠ¡ç®¡ç†è¿›ç¨‹å¼‚å¸¸å´©æºƒ
 		
 		CoreThread.getHandler().postDelayed(new Runnable() {
 			

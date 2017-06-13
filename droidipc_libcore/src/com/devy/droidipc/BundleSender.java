@@ -6,7 +6,7 @@ import android.os.Parcel;
 import android.os.RemoteException;
 
 /**
- * {@link BundleSender} 主要负责向远端发送{@link Bundle}对象
+ * {@link BundleSender} 涓昏璐熻矗鍚戣繙绔彂閫亄@link Bundle}瀵硅薄
  * @author wei.deng
  */
 public final class BundleSender implements IBundleSender,IBinder.DeathRecipient{

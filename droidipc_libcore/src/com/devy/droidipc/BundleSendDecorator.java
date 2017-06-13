@@ -7,8 +7,8 @@ import android.os.IBinder;
 import android.os.Parcel;
 import android.os.RemoteException;
 /**
- * BundleSendDecorator主要负责装饰{@link IBundleSender}<br>
- * 实现发送远程回调{@link IBinder}
+ * BundleSendDecorator涓昏璐熻矗瑁呴グ{@link IBundleSender}<br>
+ * 瀹炵幇鍙戦�佽繙绋嬪洖璋儃@link IBinder}
  * @author wei.deng
  */
 @SuppressLint("NewApi") 

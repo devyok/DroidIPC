@@ -8,7 +8,7 @@ import android.os.Parcel;
 import android.os.RemoteException;
 
 /**
- * {@link BundleReceiver}Ö÷Òª¸ºÔğ½ÓÊÕÓÉ{@link BundleSender}·¢ËÍµÄ{@link Bundle}¶ÔÏó¡£
+ * {@link BundleReceiver}ä¸»è¦è´Ÿè´£æ¥æ”¶ç”±{@link BundleSender}å‘é€çš„{@link Bundle}å¯¹è±¡ã€‚
  * @author wei.deng
  */
 @SuppressLint("NewApi") 
