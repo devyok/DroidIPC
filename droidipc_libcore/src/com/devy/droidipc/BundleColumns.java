@@ -1,5 +1,10 @@
 package com.devy.droidipc;
 
+/**
+ * 
+ * @author wei.deng
+ *
+ */
 public interface BundleColumns {
 
 	public static final String ACTION = "com.devyok.action";
