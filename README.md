@@ -1,7 +1,9 @@
+# 废弃 #
+请参考：[ServiceManager](https://github.com/devyok/ServiceManager)
+
 # DroidIPC
 Android进程间通信框架
 
-本进程通信库目前只支持android4.4以上版本
 
 背景：
 为了应对移动应用内存限制的问题，移动应用通常进行多进程化(根据职责驱动原则和模式分解，分割业务
