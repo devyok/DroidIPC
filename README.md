@@ -108,6 +108,11 @@ intent-filter中的action是（包名+.+_SERVICE_），同时使用meta-data声�
         </intent-filter>
 	</service>
 
+### 设计 ###
+由于目前这个框架我们主要是在我们的定制的android系统中使用，所以下图看到的会有UID是System的应用，请参考：
+
+![](https://raw.githubusercontent.com/devyok/DroidIPC/master/DroidIPC_Design.png)
+
 ## License ##
 ServiceManager is released under the [Apache 2.0 license](https://github.com/devyok/DroidIPC/blob/master/LICENSE).
 
