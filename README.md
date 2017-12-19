@@ -61,6 +61,7 @@ Android进程间通信框架
 
 ### 第三步 ###
 接收对端的Bundle请求，并实现这个请求并返回
+
 	public class ActivityServiceProvider extends BundleReceiver {
 
 		public Bundle onReceiver(Bundle bundle) {
