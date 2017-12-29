@@ -1,5 +1,5 @@
 # 废弃 #
-请参考：[ServiceManager](https://github.com/devyok/ServiceManager)
+请参考：[IPCServiceManager](https://github.com/devyok/IPCServiceManager)
 
 # DroidIPC
 Android进程间通信框架
